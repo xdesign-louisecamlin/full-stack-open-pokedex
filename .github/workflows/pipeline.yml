@@ -16,4 +16,8 @@ jobs:
       - name: npm install
         run: npm install
       - name: lint
+        env: 
+          browser: true
+          node: true
+          es6: true
         run: npm run eslint
