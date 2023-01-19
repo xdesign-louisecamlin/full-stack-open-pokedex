@@ -9,7 +9,6 @@ const formatName = (nameWithDash) => nameWithDash.replace('-', ' ')
 
 const PokemonPage = ({ previous, next }) => {
   const { name } = useParams()
-  console.log(name);
   const { data: pokemon, error, isLoading } = useApi(`https://pokeapi.co/api/v2/pokemon/${name}`)
 
   if (isLoading) {
