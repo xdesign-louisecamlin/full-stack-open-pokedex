@@ -1,20 +1,21 @@
-# fly.toml file generated for billowing-pine-1735 on 2023-01-19T15:17:30Z
+# fly.toml file generated for spring-surf-1265 on 2023-01-19T16:52:21Z
 
-app = "billowing-pine-1735"
+app = "spring-surf-1265"
 kill_signal = "SIGINT"
 kill_timeout = 5
+processes = []
 
 [env]
-  PORT = 8080
+  PORT = "8080"
+
+[experimental]
+  auto_rollback = true
 
 [deploy]
   release_command = "npm run build"
 
 [processes]
   app = "node app.js"
-
-[experimental]
-  auto_rollback = true
 
 [[services]]
   http_checks = []
